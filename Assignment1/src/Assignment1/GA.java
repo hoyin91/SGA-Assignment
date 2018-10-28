@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class GA {
 
-    private static final double mutationRate = 0.15;
+    private static final double mutationRate = 0.2;
     private static final int tournamentSize = 2;
     private static final boolean elitism = true;
 
@@ -20,7 +20,7 @@ public class GA {
             projOffset = 1;
         }
 
-        for(int i = projOffset; i < 5;i++) {
+        for(int i = projOffset; i < pop.populationSize();i++) {
 
             // Select parents
             Project_Config parent1 = FPS(pop);

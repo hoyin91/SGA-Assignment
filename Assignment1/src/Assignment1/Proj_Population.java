@@ -51,26 +51,12 @@ public class Proj_Population {
         // Loop through individuals to find fittest
         for (int i = 0; i < populationSize(); i++)
         {
-            /*
-            if(fittest.getPassStatus()==true)
-            {
-                if ((fittest.getEarnings() <= getProj_Config(i).getEarnings())&&( getProj_Config(i).getPassStatus()==true))
-                {
-                    fittest = getProj_Config(i);
-                    System.out.println("The fittest is proj_config :"+i);
-                }
-            }
-            else
-            {
-                fittest = getProj_Config(i);
-            }*/
             if(fittest.getFitnessValue() < proj_conf[i].getFitnessValue())
             {
                 fittest = proj_conf[i];
                 fittest_index = i;
             }
         }
-        System.out.println("Fittest index is "+fittest_index);
         return fittest;
     }
 
